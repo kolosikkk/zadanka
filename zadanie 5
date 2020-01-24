@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+
+namespace zad2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = 0;
+            Console.WriteLine("podaj ilosc liczb :");
+            n = Convert.ToInt32(Console.ReadLine());
+            double[] tab1 = new double[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("podaj liczbe");
+                tab1[i] = Convert.ToDouble(Console.ReadLine());
+            }
+
+            Array.Sort(tab1);
+            List<double> tab2 = new List<double>(tab1);
+            double najmniejsza = tab2.Find(tab1 => tab1 % 2 == 1);
+            double najwieksza = tab2.FindLast(tab1 => tab1 % 2 == 0);
+            Console.WriteLine("liczba najmniejsza nieparzysta  {0},  liczba najwieksza parzysta  {1}",najmniejsza,najwieksza);
+            Console.ReadKey();
+            
+        }
+    }
+}
