@@ -1,0 +1,30 @@
+using System;
+
+namespace zad2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           int a=10,suma=0;
+            
+            
+            while(a!=0)
+            {
+                Console.WriteLine("podaj liczbe");
+                a = Convert.ToInt32(Console.ReadLine());
+                if (a == 0) break;
+                
+                Console.WriteLine("suma={0}", suma += a);
+
+
+
+
+
+            }
+            
+             Console.ReadKey();
+            
+        }
+    }
+}
