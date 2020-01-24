@@ -1,0 +1,46 @@
+using System;
+
+namespace zad2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("podaj kwote w zł");
+            Double jen = 0.034421, bat = 0.1188, forin = 0.013491, kuna = 0.5780;
+            Double a = Convert.ToDouble(Console.ReadLine());
+            if (a < 0) Console.WriteLine("podano niewłaściwą kwote");
+            else
+            {
+                Console.WriteLine("menu: Wybierz walute");
+                Console.WriteLine("1.yen");
+                Console.WriteLine("2.bat");
+                Console.WriteLine("3.forint");
+                Console.WriteLine("4.kuna");
+                int b = Convert.ToInt32(Console.ReadLine());
+                int caseSwitch = b;
+                switch (caseSwitch)
+                {
+                    case 1:
+                        Console.WriteLine("{0} zl={1} jen", a, a * jen);
+                        break;
+                    case 2:
+                        Console.WriteLine("{0} zl={1} bat", a, a * bat);
+                        break;
+                    case 3:
+                        Console.WriteLine("{0} zl={1} forin", a * forin);
+                        break;
+                    case 4:
+
+                        Console.WriteLine("{0} zl={1} kuna", a, a * kuna);
+                        break;
+                    default:
+                        Console.WriteLine("Wciśnięto niewłaściwy przycisk ");
+                        break;
+                }
+                System.Console.ReadKey();
+            }
+            
+        }
+    }
+}
