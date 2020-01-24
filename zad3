@@ -1,0 +1,27 @@
+using System;
+
+namespace zad2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a,b;
+            
+            Console.WriteLine("podaj promień:");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("podaj kąt :");
+            b = Convert.ToInt32(Console.ReadLine());
+            if (a <= 0 || b < 0 || b > 360) Console.WriteLine("niepoprawne dane promień powinien byc>0,a kąt z przediału od 0 do 360");
+            Console.WriteLine("{0}", b / 360 * a *a* Math.PI);
+
+
+
+            Console.ReadKey();
+            
+
+
+
+        }
+    }
+}
