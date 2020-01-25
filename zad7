@@ -4,77 +4,99 @@ namespace ConsoleApp7
 {
     class Program
     {
-        static private double Elo()
+        static private void Elo()
         {
-
-            double a, b;
-            Console.WriteLine("liczenie wycinka koła");
-            Console.WriteLine("podaj promień w metrach:");
-            a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("podaj kąt :");
-            b = Convert.ToInt32(Console.ReadLine());
-            if (a <= 0 || b < 0 || b > 360) Console.WriteLine("niepoprawne dane promień powinien byc>0,a kąt z przediału od 0 do 360");
-            else Console.WriteLine("{0}m^2", b / 360 * a * a * Math.PI);
-            return a;
+            try
+            {
+                double a, b;
+                Console.WriteLine("liczenie wycinka koła");
+                Console.WriteLine("podaj promień w metrach:");
+                a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("podaj kąt :");
+                b = Convert.ToInt32(Console.ReadLine());
+                if (a <= 0 || b < 0 || b > 360) Console.WriteLine("niepoprawne dane promień powinien byc>0,a kąt z przediału od 0 do 360");
+                else Console.WriteLine("{0}m^2", b / 360 * a * a * Math.PI);
+                
+            }
+            catch { Console.WriteLine("niepoprawne dane spróbuj ponowne"); Environment.Exit(1); }
 
         }
 
-        static private double Elo2()
+        static private void Elo2()
         {
-            double a, c; int b;
-            Console.WriteLine("n-ty wyraz ciągu arytmetycznego o pierwszym wyrazie a1 i różnicy r:");
+            try
+            {
+                double a, c; int b;
+                Console.WriteLine("n-ty wyraz ciągu arytmetycznego o pierwszym wyrazie a1 i różnicy r:");
 
-            Console.WriteLine("podaj pierszy wyraz ciągu");
-            a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("ktory wyraz chcesz pozyskac");
-            b = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("podaj różnice");
-            c = Convert.ToDouble(Console.ReadLine());
-            if (b <= 0) Console.WriteLine("wyraz ciagu powinien byc wiekszy od 1");
-            else Console.WriteLine("{0}", a + (b - 1) * c);
-            return a;
+                Console.WriteLine("podaj pierszy wyraz ciągu");
+                a = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("ktory wyraz chcesz pozyskac");
+                b = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("podaj różnice");
+                c = Convert.ToDouble(Console.ReadLine());
+                if (b <= 0) Console.WriteLine("wyraz ciagu powinien byc wiekszy od 1");
+                else Console.WriteLine("{0}", a + (b - 1) * c);
+                
+            }
+            catch { Console.WriteLine("niepoprawne dane spróbuj ponowne"); Environment.Exit(1); }
+
 
         }
-        static private double Elo3()
+        static private void Elo3()
         {
-            double a, b, h;
-            Console.WriteLine("Liczenie pola trapezu");
-            Console.WriteLine("podaj dlugosc pierwszej podstawy");
-            a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("podaj dlugosc drugiej podstawy");
-            b = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("podaj wysokosc trapezu");
-            h = Convert.ToDouble(Console.ReadLine());
-            if (a <= 0 || b <= 0 || h <= 0) Console.WriteLine("wszystkie parametry trapezu musza byc dodatnie");
-            else Console.WriteLine("{0}j^2", (a + b) * h / 2);
-            return a;
+            try
+            {
+                double a, b, h;
+                Console.WriteLine("Liczenie pola trapezu");
+                Console.WriteLine("podaj dlugosc pierwszej podstawy");
+                a = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("podaj dlugosc drugiej podstawy");
+                b = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("podaj wysokosc trapezu");
+                h = Convert.ToDouble(Console.ReadLine());
+                if (a <= 0 || b <= 0 || h <= 0) Console.WriteLine("wszystkie parametry trapezu musza byc dodatnie");
+                else Console.WriteLine("{0}j^2", (a + b) * h / 2);
+                
+            }
+            catch { Console.WriteLine("niepoprawne dane spróbuj ponowne"); Environment.Exit(1); }
         }
 
-        static private double Elo4()
+        static private void Elo4()
         {
-            double a, b, c;
-            Console.WriteLine("liczenie objętości prostopadloscianu");
-            Console.WriteLine("podaj pierwszy bok w podstawie");
-            a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("podaj drugi bok w podstawie");
-            b = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("podaj wysokosc prostopadloscianu");
-            c = Convert.ToDouble(Console.ReadLine());
-            if (a <= 0 || b <= 0 || c <= 0) Console.WriteLine("wszystkie parametry trapezu musza byc dodatnie");
-            else Console.WriteLine("{0}", a * b * c);
-            return a;
+            try
+            {
+                double a, b, c;
+                Console.WriteLine("liczenie objętości prostopadloscianu");
+                Console.WriteLine("podaj pierwszy bok w podstawie");
+                a = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("podaj drugi bok w podstawie");
+                b = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("podaj wysokosc prostopadloscianu");
+                c = Convert.ToDouble(Console.ReadLine());
+                if (a <= 0 || b <= 0 || c <= 0) Console.WriteLine("wszystkie parametry trapezu musza byc dodatnie");
+                else Console.WriteLine("{0}", a * b * c);
+                
+            }
+            catch { Console.WriteLine("niepoprawne dane spróbuj ponowne"); Environment.Exit(1); }
+
 
         }
         static private void Elo5()
         {
-            double a;
-            Console.WriteLine("5.zmien kat na wartosc cosinus");
-            Console.WriteLine("podaj kat");
-            a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("0", Math.Sin(a));
+            try
+            {
+                double a;
+                Console.WriteLine("5.zmien kat na wartosc cosinus");
+                Console.WriteLine("podaj kat");
+                a = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("0", Math.Sin(a));
+            }
+            catch { Console.WriteLine("niepoprawne dane spróbuj ponowne"); Environment.Exit(1); }
+
 
         }
-        
+
 
         static void Main(string[] args)
         {
@@ -90,7 +112,7 @@ namespace ConsoleApp7
                 Console.WriteLine("0.zakoncz dzialanie programu");
                 int b = Convert.ToInt32(Console.ReadLine());
                 int caseSwitch = b;
-                
+
                 switch (caseSwitch)
                 {
                     case 1:
@@ -105,7 +127,7 @@ namespace ConsoleApp7
                     case 5:
                         Elo5(); break;
                     case 0:
-                         Environment.Exit(0);break;
+                        Environment.Exit(0); break;
                     default:
                         Console.WriteLine("Wciśnięto niewłaściwy przycisk ");
                         break;
