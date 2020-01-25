@@ -1,33 +1,29 @@
 using System;
-using System.Collections.Generic;
 
-namespace zad7
+namespace ConsoleApp7
 {
-    
-    
-        class Program
+    class Program
+    {
+        static private double Elo()
         {
 
-            static private double Elo()
-            {
+            double a, b;
+            Console.WriteLine("liczenie wycinka koła");
+            Console.WriteLine("podaj promień w metrach:");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("podaj kąt :");
+            b = Convert.ToInt32(Console.ReadLine());
+            if (a <= 0 || b < 0 || b > 360) Console.WriteLine("niepoprawne dane promień powinien byc>0,a kąt z przediału od 0 do 360");
+            else Console.WriteLine("{0}m^2", b / 360 * a * a * Math.PI);
+            return a;
 
-                double a, b;
-                Console.WriteLine("liczenie wycinka koła");
-                Console.WriteLine("podaj promień w metrach:");
-                a = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("podaj kąt :");
-                b = Convert.ToInt32(Console.ReadLine());
-                if (a <= 0 || b < 0 || b > 360) Console.WriteLine("niepoprawne dane promień powinien byc>0,a kąt z przediału od 0 do 360");
-                else Console.WriteLine("{0}m^2", b / 360 * a * a * Math.PI);
-                return a;
+        }
 
-            }
-
-            static private double Elo2()
-            {
-            double a, c;int b;
+        static private double Elo2()
+        {
+            double a, c; int b;
             Console.WriteLine("n-ty wyraz ciągu arytmetycznego o pierwszym wyrazie a1 i różnicy r:");
-            
+
             Console.WriteLine("podaj pierszy wyraz ciągu");
             a = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("ktory wyraz chcesz pozyskac");
@@ -39,8 +35,8 @@ namespace zad7
             return a;
 
         }
-            static private double Elo3()
-            {
+        static private double Elo3()
+        {
             double a, b, h;
             Console.WriteLine("Liczenie pola trapezu");
             Console.WriteLine("podaj dlugosc pierwszej podstawy");
@@ -54,8 +50,8 @@ namespace zad7
             return a;
         }
 
-            static private double Elo4()
-            {
+        static private double Elo4()
+        {
             double a, b, c;
             Console.WriteLine("liczenie objętości prostopadloscianu");
             Console.WriteLine("podaj pierwszy bok w podstawie");
@@ -69,8 +65,8 @@ namespace zad7
             return a;
 
         }
-            static private void Elo5()
-            {
+        static private void Elo5()
+        {
             double a;
             Console.WriteLine("5.zmien kat na wartosc cosinus");
             Console.WriteLine("podaj kat");
@@ -78,45 +74,45 @@ namespace zad7
             Console.WriteLine("0", Math.Sin(a));
 
         }
-        public static void Exit();
+        
 
         static void Main(string[] args)
+        {
+            Console.WriteLine("Stworzone przez : Sebastian Wrzosek, nr indeksu: 51269");
+            for (; ; )
             {
-                Console.WriteLine("Stworzone przez : Sebastian Wrzosek, nr indeksu: 51269");
-                for (; ; )
-                {
 
-                    Console.WriteLine("1.liczenie wycinka koła");
-                    Console.WriteLine("2.n-ty wyraz ciągu arytmetycznego o pierwszym wyrazie a1 i różnicy r:");
-                    Console.WriteLine("3.Liczenie pola trapezu");
-                    Console.WriteLine("4.liczenie objętości prostopadloscianu");
-                    Console.WriteLine("5.zmien kat na wartosc cosinus");
-                    Console.WriteLine("0.zakoncz dzialanie programu");
+                Console.WriteLine("1.liczenie wycinka koła");
+                Console.WriteLine("2.n-ty wyraz ciągu arytmetycznego o pierwszym wyrazie a1 i różnicy r:");
+                Console.WriteLine("3.Liczenie pola trapezu");
+                Console.WriteLine("4.liczenie objętości prostopadloscianu");
+                Console.WriteLine("5.zmien kat na wartosc cosinus");
+                Console.WriteLine("0.zakoncz dzialanie programu");
                 int b = Convert.ToInt32(Console.ReadLine());
-                    int caseSwitch = b;
-                    switch (caseSwitch)
-                    {
-                        case 1:
-                            Elo(); break;
+                int caseSwitch = b;
+                
+                switch (caseSwitch)
+                {
+                    case 1:
+                        Elo(); break;
 
-                        case 2:
+                    case 2:
                         Elo2(); break;
-                        case 3:
+                    case 3:
                         Elo3(); break;
-                        case 4:
+                    case 4:
                         Elo4(); break;
-                        case 5:
+                    case 5:
                         Elo5(); break;
-                        case 0:
-                        Exit(); break;
-                        default:
-                            Console.WriteLine("Wciśnięto niewłaściwy przycisk ");
-                            break;
+                    case 0:
+                         break;
+                    default:
+                        Console.WriteLine("Wciśnięto niewłaściwy przycisk ");
+                        break;
 
-                    }
                 }
             }
         }
-    
+    }
 }
 
