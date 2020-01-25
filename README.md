@@ -1,3 +1,3 @@
 # zadanka
 zadania na programowanie
-https://cdn.discordapp.com/attachments/670323786742104094/670388606250254355/84395438_629989827544898_7818455064300748800_n.jpg
+
